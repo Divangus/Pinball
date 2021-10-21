@@ -1,0 +1,9 @@
+﻿  ModulePhysics.cpp
+C:\Users\marinaav\Documents\GitHub\Pinball\Pinball\ModulePhysics.cpp(40,8): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\marinaav\Documents\GitHub\Pinball\Pinball\ModulePhysics.cpp(121,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\marinaav\Documents\GitHub\Pinball\Pinball\ModulePhysics.cpp(122,25): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\marinaav\Documents\GitHub\Pinball\Pinball\ModulePhysics.cpp(165,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\marinaav\Documents\GitHub\Pinball\Pinball\ModulePhysics.cpp(388,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\marinaav\Documents\GitHub\Pinball\Pinball\ModulePhysics.cpp(389,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\marinaav\Documents\GitHub\Pinball\Pinball\ModulePhysics.cpp(395,27): warning C4244: 'return': conversion from 'float32' to 'int', possible loss of data
+  SDL Game.vcxproj -> C:\Users\marinaav\Documents\GitHub\Pinball\Pinball\Debug\2D Physics - class 4.exe

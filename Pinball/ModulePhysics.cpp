@@ -265,7 +265,28 @@ update_status ModulePhysics::PostUpdate()
 			}
 
 			// TODO 1: If mouse button 1 is pressed ...
-			// App->input->GetMouseButton(SDL_BUTTON_LEFT) == KEY_DOWN
+			if (App->input->GetMouseButton(SDL_BUTTON_LEFT) == KEY_DOWN)
+			{
+				p = { PIXEL_TO_METERS(App->input->GetMouseX()), PIXEL_TO_METERS(App->input->GetMouseY()) };
+				if (f->GetShape()->TestPoint(b->GetTransform(), p) == true)
+				{
+					mouseBody = b;
+
+					b2Vec2 mousePosition;
+					mousePosition.x = p.x;
+					mousePosition.y = p.y;
+
+					b2MouseJointDef def;
+					def.bodyA = ground;
+					def.bodyB = mouseBody;
+					def.target = mousePosition;
+					def.dampingRatio = 0.1f;
+					def.frequencyHz = 2.0f;
+					def.maxForce = 100.0f * mouseBody->GetMass();
+
+					mouse_joint = (b2MouseJoint*)world->CreateJoint(&def);
+				}
+			}
 			// test if the current body contains mouse position
 		}
 	}
@@ -279,8 +300,29 @@ update_status ModulePhysics::PostUpdate()
 	// TODO 3: If the player keeps pressing the mouse button, update
 	// target position and draw a red line between both anchor points
 
-	// TODO 4: If the player releases the mouse button, destroy the joint
+	
+	if (mouseBody != nullptr && mouse_joint != nullptr)
+	{
+		if (App->input->GetMouseButton(SDL_BUTTON_LEFT) == KEY_REPEAT)
+		{
+			b2Vec2 mousePosition;
+			mousePosition.x = PIXEL_TO_METERS(App->input->GetMouseX());
+			mousePosition.y = PIXEL_TO_METERS(App->input->GetMouseY());
+			mouse_joint->SetTarget(mousePosition);
 
+			App->renderer->DrawLine(METERS_TO_PIXELS(mouseBody->GetPosition().x), METERS_TO_PIXELS(mouseBody->GetPosition().y), App->input->GetMouseX(), App->input->GetMouseY(), 255, 0, 0);
+		}
+
+
+		// TODO 4: If the player releases the mouse button, destroy the joint
+
+		if (App->input->GetMouseButton(SDL_BUTTON_LEFT) == KEY_UP)
+		{
+			world->DestroyJoint(mouse_joint);
+			mouse_joint = nullptr;
+			mouseBody = nullptr;
+		}
+	}
 	return UPDATE_CONTINUE;
 }
 
