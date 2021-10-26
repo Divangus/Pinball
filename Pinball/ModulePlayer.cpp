@@ -1,6 +1,9 @@
 #include "Globals.h"
 #include "Application.h"
 #include "ModulePlayer.h"
+#include "ModuleInput.h"
+#include "ModulePhysics.h"
+#include "ModuleRender.h"
 
 ModulePlayer::ModulePlayer(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
@@ -27,6 +30,12 @@ bool ModulePlayer::CleanUp()
 // Update: draw background
 update_status ModulePlayer::Update()
 {
+	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN) {
+		circles.add(App->physics->CreateCircle(515, 826, 15));
+		circles.getLast()->data->listener = this;
+	}
+	
+
 	return UPDATE_CONTINUE;
 }
 

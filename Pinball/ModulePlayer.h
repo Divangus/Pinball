@@ -3,6 +3,8 @@
 #include "Globals.h"
 #include "p2Point.h"
 
+struct SDL_Texture;
+
 class ModulePlayer : public Module
 {
 public:
@@ -14,5 +16,7 @@ public:
 	bool CleanUp();
 
 public:
+	p2List<PhysBody*> circles;
 
+	SDL_Texture* texture;
 };
