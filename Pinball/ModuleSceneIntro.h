@@ -23,6 +23,7 @@ public:
 	p2List<PhysBody*> ricks;
 	p2List<PhysBody*> elephs;
 	p2List<PhysBody*> walls;
+	p2List<PhysBody*> wal1;
 	PhysBody* sensor;
 	/*PhysBody* right;
 	PhysBody* right_circle;

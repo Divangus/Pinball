@@ -16,6 +16,9 @@ ModulePlayer::~ModulePlayer()
 bool ModulePlayer::Start()
 {
 	LOG("Loading player");
+	circles.add(App->physics->CreateCircle(515, 826, 15));
+	circles.getLast()->data->listener = this;
+	muellesito.add(App->physics->CreateRectangle(515, 850, 30, 20));
 	return true;
 }
 
@@ -30,9 +33,11 @@ bool ModulePlayer::CleanUp()
 // Update: draw background
 update_status ModulePlayer::Update()
 {
-	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN) {
-		circles.add(App->physics->CreateCircle(515, 826, 15));
-		circles.getLast()->data->listener = this;
+	
+	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN)
+	{
+		
+		
 	}
 	
 
