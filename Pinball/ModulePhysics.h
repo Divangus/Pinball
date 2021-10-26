@@ -47,7 +47,7 @@ public:
 	PhysBody* CreateRectangle(int x, int y, int width, int height);
 	PhysBody* CreateRectangleSensor(int x, int y, int width, int height);
 	PhysBody* CreateChain(int x, int y, int* points, int size);
-	b2World* world;
+	
 
 	// b2ContactListener ---
 	void BeginContact(b2Contact* contact);
@@ -58,7 +58,7 @@ private:
 	
 	b2MouseJoint* mouse_joint;
 	b2Body* ground;
-
+	b2World* world;
 	b2Body* mouseBody;
 	b2Vec2 p;
 

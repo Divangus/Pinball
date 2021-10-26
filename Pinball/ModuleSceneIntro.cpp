@@ -33,7 +33,7 @@ bool ModuleSceneIntro::Start()
 
 	/*sensor = App->physics->CreateRectangleSensor(SCREEN_WIDTH / 2, SCREEN_HEIGHT, SCREEN_WIDTH, 50);*/
 
-	right = App->physics->CreateRectangle(280, 939, 70, 25);
+	/*right = App->physics->CreateRectangle(280, 939, 70, 25);
 	right_circle = App->physics->CreateCircleStatic(280, 939, 12);
 
 	b2RevoluteJointDef rightRevJoint;
@@ -46,7 +46,7 @@ bool ModuleSceneIntro::Start()
 	rightRevJoint.lowerAngle = -45 * DEGTORAD;
 	rightRevJoint.upperAngle = 45 * DEGTORAD;
 
-	b2RevoluteJoint* joint_right = (b2RevoluteJoint*)App->physics->world->CreateJoint(&rightRevJoint);
+	b2RevoluteJoint* joint_right = (b2RevoluteJoint*)App->physics->world->CreateJoint(&rightRevJoint);*/
 	
 
 	//left
