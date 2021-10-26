@@ -176,7 +176,65 @@ update_status ModuleSceneIntro::Update()
 			1495, 1222,
 			1500, 1677
 		};
+
 		walls.add(App->physics->CreateChain(0, 0, wallsup, 46));
+
+		int wallRdw[12] = {
+			1336, 1963,
+			1340, 2515,
+			991, 2813,
+			1018, 2853,
+			1370, 2545,
+			1374, 1961
+		};
+		walls.add(App->physics->CreateChain(0, 0, wallRdw, 12));
+
+		int wallRup[12] = {
+			1219, 2090,
+			1220, 2372,
+			1059, 2510,
+			1075, 2534,
+			1249, 2389,
+			1249, 2090
+		};
+		walls.add(App->physics->CreateChain(0, 0, wallRup, 12));
+
+		int trinR[8] = {
+			978, 2309,
+			1121, 2044,
+			1141, 2227,
+			1021, 2332
+		};
+		walls.add(App->physics->CreateChain(0, 0, trinR, 8));
+
+		int trinL[8] = {
+			590, 2296,
+			448, 2018,
+			423, 2203,
+			560, 2306
+		};
+		walls.add(App->physics->CreateChain(0, 0, trinL, 8));
+
+		int wallLdw[12] = {
+			214, 1982,
+			217, 2576,
+			562, 2889,
+			600, 2846,
+			261, 2545,
+			261, 1986
+		};
+		walls.add(App->physics->CreateChain(0, 0, wallLdw, 12));
+
+		int wallLup[12] = {
+			329, 2114,
+			329, 2414,
+			505, 2565,
+			524, 2536,
+			361, 2405,
+			362, 2118
+		};
+		walls.add(App->physics->CreateChain(0, 0, wallLup, 12));
+
 	//background
 	App->renderer->Blit(background, 0, 0, NULL, 1.0f);
 	// Prepare for raycast ------------------------------------------------------
