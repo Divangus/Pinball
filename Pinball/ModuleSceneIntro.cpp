@@ -33,18 +33,21 @@ bool ModuleSceneIntro::Start()
 
 	/*sensor = App->physics->CreateRectangleSensor(SCREEN_WIDTH / 2, SCREEN_HEIGHT, SCREEN_WIDTH, 50);*/
 
-	/*right = App->physics->CreateRectangle(280, 939, 70, 25);
-	right_circle = App->physics->CreateCircle(280, 939, 12);*/
+	right = App->physics->CreateRectangle(280, 939, 70, 25);
+	right_circle = App->physics->CreateCircleStatic(280, 939, 12);
 
-	//right_joint.bodyA = right->body;
-	//right_joint.bodyB = right_circle->body;
-	//right_joint.referenceAngle = 0 * DEGTORAD;
-	//right_joint.enableLimit = true;
-	//right_joint.lowerAngle = -30 * DEGTORAD;
-	//right_joint.upperAngle = 30 * DEGTORAD;
-	//right_joint.localAnchorA.Set(PIXEL_TO_METERS(13), 0);
-	//right_joint.localAnchorB.Set(0, 0);
-	//b2RevoluteJoint* joint_right = (b2RevoluteJoint*)App->physics->world->CreateJoint(&right_joint);
+	b2RevoluteJointDef rightRevJoint;
+	rightRevJoint.bodyA = right->body;
+	rightRevJoint.bodyB = right_circle->body;
+	rightRevJoint.localAnchorA.Set(PIXEL_TO_METERS(12), 0);
+	rightRevJoint.localAnchorB.Set(0, 0);
+	rightRevJoint.referenceAngle = 0 * DEGTORAD;
+	rightRevJoint.enableLimit = true;
+	rightRevJoint.lowerAngle = -45 * DEGTORAD;
+	rightRevJoint.upperAngle = 45 * DEGTORAD;
+
+	b2RevoluteJoint* joint_right = (b2RevoluteJoint*)App->physics->world->CreateJoint(&rightRevJoint);
+	
 
 	//left
 	//left = App->physics->CreateRectangle(174, 939, 70, 25);

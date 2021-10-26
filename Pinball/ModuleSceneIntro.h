@@ -25,12 +25,10 @@ public:
 	p2List<PhysBody*> walls;
 	p2List<PhysBody*> wal1;
 	PhysBody* sensor;
-	/*PhysBody* right;
+	PhysBody* right;
 	PhysBody* right_circle;
 	PhysBody* left;
 	PhysBody* left_circle;
-	b2RevoluteJointDef right_joint;
-	b2RevoluteJointDef left_joint;*/
 	bool sensed;
 
 	SDL_Texture* circle;
