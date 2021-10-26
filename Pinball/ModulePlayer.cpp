@@ -20,7 +20,7 @@ bool ModulePlayer::Start()
 	bola = App->textures->Load("pinball/bola.png");
 	circles.add(App->physics->CreateCircle(515, 826, 15));
 	circles.getLast()->data->listener = this;
-	muellesito.add(App->physics->CreateRectangle(515, 850, 30, 20));
+	muellesito=App->physics->CreateRectangle(515, 850, 30, 20);
 	
 	return true;
 }
@@ -39,13 +39,22 @@ update_status ModulePlayer::Update()
 	p2List_item<PhysBody*>* c = circles.getFirst();
 	int x, y;
 	c->data->GetPosition(x, y);
+	static int pow = 0;
 	App->renderer->Blit(bola, x, y, NULL, 1.0f, c->data->GetRotation());
+
+	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT) {
+		pow += 30;
+		if (pow > 300)
+			pow = 300;
+	}
 	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_DOWN)
 	{
-		position.y--;
+		/*position.y--;
 		if (position.y >= 530) {
 			position.y = 530;
-		}
+		}*/
+
+		muellesito->body->ApplyForceToCenter(b2Vec2(0, -pow), 1);
 		
 	}
 	

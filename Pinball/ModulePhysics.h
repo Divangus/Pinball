@@ -43,9 +43,12 @@ public:
 	bool CleanUp();
 
 	PhysBody* CreateCircle(int x, int y, int radius);
+	PhysBody* CreateCircleStatic(int x, int y, int radius);
 	PhysBody* CreateRectangle(int x, int y, int width, int height);
 	PhysBody* CreateRectangleSensor(int x, int y, int width, int height);
 	PhysBody* CreateChain(int x, int y, int* points, int size);
+	b2World* world;
+	
 
 	// b2ContactListener ---
 	void BeginContact(b2Contact* contact);
@@ -53,10 +56,9 @@ public:
 private:
 
 	bool debug;
-	b2World* world;
+	
 	b2MouseJoint* mouse_joint;
 	b2Body* ground;
-
 	b2Body* mouseBody;
 	b2Vec2 p;
 

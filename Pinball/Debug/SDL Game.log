@@ -1,5 +1,5 @@
 ﻿  ModuleSceneIntro.cpp
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(307,45): warning C4244: 'argument': conversion from 'TYPE' to 'TYPE', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(320,45): warning C4244: 'argument': conversion from 'TYPE' to 'TYPE', possible loss of data
           with
           [
               TYPE=int
@@ -8,7 +8,7 @@ C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(307,45)
           [
               TYPE=float
           ]
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(307,30): warning C4244: 'argument': conversion from 'TYPE' to 'TYPE', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(320,30): warning C4244: 'argument': conversion from 'TYPE' to 'TYPE', possible loss of data
           with
           [
               TYPE=int
@@ -17,40 +17,37 @@ C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(307,30)
           [
               TYPE=float
           ]
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(309,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(311,70): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(322,18): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(324,70): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
           with
           [
               TYPE=float
           ]
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(311,47): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(324,47): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
           with
           [
               TYPE=float
           ]
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(314,138): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(327,138): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
           with
           [
               TYPE=float
           ]
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(314,96): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(327,96): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
           with
           [
               TYPE=float
           ]
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(314,57): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(327,57): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
           with
           [
               TYPE=float
           ]
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(314,34): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(327,34): warning C4244: 'argument': conversion from 'TYPE' to 'int', possible loss of data
           with
           [
               TYPE=float
           ]
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(322,9): warning C4101: 'y': unreferenced local variable
-C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(322,6): warning C4101: 'x': unreferenced local variable
-  ModuleTextures.cpp
-  ModuleWindow.cpp
-  Generating Code...
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(335,9): warning C4101: 'y': unreferenced local variable
+C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(335,6): warning C4101: 'x': unreferenced local variable
   SDL Game.vcxproj -> C:\Users\davidbc10\Documents\GitHub\Pinball\Pinball\Debug\2D Physics - class 4.exe
