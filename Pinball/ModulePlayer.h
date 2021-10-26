@@ -18,6 +18,6 @@ public:
 public:
 	p2List<PhysBody*> circles;
 	p2List<PhysBody*> muellesito;
-
-	SDL_Texture* texture;
+	iPoint position;
+	SDL_Texture* bola;
 };

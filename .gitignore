@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+*.pdb
+*.pdb
+*.idb
+Pinball/Debug/vc142.pdb
+*.pdb

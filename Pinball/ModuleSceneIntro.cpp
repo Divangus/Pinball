@@ -33,8 +33,8 @@ bool ModuleSceneIntro::Start()
 
 	/*sensor = App->physics->CreateRectangleSensor(SCREEN_WIDTH / 2, SCREEN_HEIGHT, SCREEN_WIDTH, 50);*/
 
-	right = App->physics->CreateRectangle(280, 939, 70, 25);
-	right_circle = App->physics->CreateCircle(280, 939, 12);
+	/*right = App->physics->CreateRectangle(280, 939, 70, 25);
+	right_circle = App->physics->CreateCircle(280, 939, 12);*/
 
 	//right_joint.bodyA = right->body;
 	//right_joint.bodyB = right_circle->body;
@@ -47,7 +47,7 @@ bool ModuleSceneIntro::Start()
 	//b2RevoluteJoint* joint_right = (b2RevoluteJoint*)App->physics->world->CreateJoint(&right_joint);
 
 	//left
-	left = App->physics->CreateRectangle(174, 939, 70, 25);
+	//left = App->physics->CreateRectangle(174, 939, 70, 25);
 
 
 	return ret;
