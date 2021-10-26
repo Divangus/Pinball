@@ -31,8 +31,7 @@ bool ModuleSceneIntro::Start()
 	background = App->textures->Load("pinball/Pinball2.png");
 	bonus_fx = App->audio->LoadFx("pinball/bonus.wav");
 
-
-	sensor = App->physics->CreateRectangleSensor(SCREEN_WIDTH / 2, SCREEN_HEIGHT, SCREEN_WIDTH, 50);
+	/*sensor = App->physics->CreateRectangleSensor(SCREEN_WIDTH / 2, SCREEN_HEIGHT, SCREEN_WIDTH, 50);*/
 
 	return ret;
 }
@@ -106,6 +105,52 @@ update_status ModuleSceneIntro::Update()
 
 		ricks.add(App->physics->CreateChain(App->input->GetMouseX(), App->input->GetMouseY(), rick_head, 64));
 	}
+
+	
+		// Pivot 0, 0
+		int elephant[76] = {
+			1488, 3295,
+	1606, 3295,
+	1611, 937,
+	1502, 675,
+	1355, 440,
+	1182, 277,
+	1011, 197,
+	835, 168,
+	613, 215,
+	488, 291,
+	320, 477,
+	326, 597,
+	420, 622,
+	511, 604,
+	528, 631,
+	442, 757,
+	466, 902,
+	477, 1026,
+	420, 1091,
+	382, 1304,
+	326, 1304,
+	377, 1528,
+	284, 1160,
+	144, 1153,
+	266, 1615,
+	240, 1573,
+	108, 1815,
+	100, 2615,
+	684, 3095,
+	677, 3162,
+	591, 3268,
+	962, 3271,
+	877, 3164,
+	833, 3108,
+	1442, 2604,
+	1437, 1682,
+	1491, 1680,
+	1482, 3280
+		};
+
+		elephs.add(App->physics->CreateChain(0, 0, elephant, 76));
+	
 	//background
 	App->renderer->Blit(background, 0, 0, NULL, 1.0f);
 	// Prepare for raycast ------------------------------------------------------
