@@ -22,7 +22,7 @@ public:
 	p2List<PhysBody*> boxes;
 	p2List<PhysBody*> ricks;
 	p2List<PhysBody*> elephs;
-
+	p2List<PhysBody*> walls;
 	PhysBody* sensor;
 	bool sensed;
 
