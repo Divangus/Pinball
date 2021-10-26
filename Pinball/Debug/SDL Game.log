@@ -1,1 +1,57 @@
-﻿  SDL Game.vcxproj -> C:\Users\david\Documents\GitHub\Pinball\Pinball\Debug\2D Physics - class 4.exe
+﻿  Application.cpp
+  ModulePlayer.cpp
+  ModuleSceneIntro.cpp
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.h(31,32): error C3646: 'right_joint': especificador de invalidación desconocido
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.h(31,32): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.h(32,31): error C3646: 'left_joint': especificador de invalidación desconocido
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.h(32,31): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(249,45): warning C4244: 'argumento': conversión de 'TYPE' a 'TYPE'; posible pérdida de datos
+          with
+          [
+              TYPE=int
+          ]
+          and
+          [
+              TYPE=float
+          ]
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(249,30): warning C4244: 'argumento': conversión de 'TYPE' a 'TYPE'; posible pérdida de datos
+          with
+          [
+              TYPE=int
+          ]
+          and
+          [
+              TYPE=float
+          ]
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(251,18): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(253,70): warning C4244: 'argumento': conversión de 'TYPE' a 'int'; posible pérdida de datos
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(253,47): warning C4244: 'argumento': conversión de 'TYPE' a 'int'; posible pérdida de datos
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(256,138): warning C4244: 'argumento': conversión de 'TYPE' a 'int'; posible pérdida de datos
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(256,96): warning C4244: 'argumento': conversión de 'TYPE' a 'int'; posible pérdida de datos
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(256,57): warning C4244: 'argumento': conversión de 'TYPE' a 'int'; posible pérdida de datos
+          with
+          [
+              TYPE=float
+          ]
+C:\Users\david\Documents\GitHub\Pinball\Pinball\ModuleSceneIntro.cpp(256,34): warning C4244: 'argumento': conversión de 'TYPE' a 'int'; posible pérdida de datos
+          with
+          [
+              TYPE=float
+          ]
+  Generando código...
