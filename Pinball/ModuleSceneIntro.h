@@ -40,5 +40,5 @@ public:
 	SDL_Texture* elephant;
 	uint bonus_fx;
 	p2Point<int> ray;
-	bool ray_on;
+	bool ray_on=true;
 };
