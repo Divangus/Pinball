@@ -17,7 +17,9 @@ ModulePlayer::~ModulePlayer()
 bool ModulePlayer::Start()
 {
 	LOG("Loading player");
+	//Textures
 	bola = App->textures->Load("pinball/bola.png");
+	//Rectangles and Circle
 	circles.add(App->physics->CreateCircle(515, 826, 15));
 	circles.getLast()->data->listener = this;
 	muellesito=App->physics->CreateRectangle(515, 850, 30, 20);
@@ -43,17 +45,13 @@ update_status ModulePlayer::Update()
 	App->renderer->Blit(bola, x, y, NULL, 1.0f, c->data->GetRotation());
 
 	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT) {
-		pow += 30;
+		pow += 40;
 		if (pow > 300)
 			pow = 300;
 	}
 	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_DOWN)
 	{
-		/*position.y--;
-		if (position.y >= 530) {
-			position.y = 530;
-		}*/
-
+		
 		muellesito->body->ApplyForceToCenter(b2Vec2(0, -pow), 1);
 		
 	}
