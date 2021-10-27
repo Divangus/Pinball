@@ -50,8 +50,8 @@ bool ModuleSceneIntro::Start()
 
 	map();
 
-	right = App->physics->CreateRectangle(310, 945, 70, 25);
-	right_circle = App->physics->CreateCircleStatic(310, 945, 12);
+	right = App->physics->CreateRectangle(310, 945, 35, 12);
+	right_circle = App->physics->CreateCircleStatic(310, 945, 6);
 
 	b2RevoluteJointDef rightRevJoint;
 	rightRevJoint.bodyA = right->body;
@@ -65,8 +65,8 @@ bool ModuleSceneIntro::Start()
 
 	b2RevoluteJoint* joint_right = (b2RevoluteJoint*)App->physics->world->CreateJoint(&rightRevJoint);
 	
-	left = App->physics->CreateRectangle(280, 945, 70, 25);
-	left_circle = App->physics->CreateCircleStatic(210, 945, 12);
+	left = App->physics->CreateRectangle(280, 945, 35, 12);
+	left_circle = App->physics->CreateCircleStatic(210, 945, 6);
 
 	b2RevoluteJointDef leftRevJoint;
 	leftRevJoint.bodyA = left->body;
@@ -95,6 +95,16 @@ bool ModuleSceneIntro::CleanUp()
 // Update: draw background
 update_status ModuleSceneIntro::Update()
 {
+
+	if (App->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_DOWN)
+	{
+		right->body->ApplyForceToCenter(b2Vec2(0, -300), 1);
+	}
+
+	if (App->input->GetKey(SDL_SCANCODE_LEFT) == KEY_DOWN)
+	{
+		left->body->ApplyForceToCenter(b2Vec2(0, -300), 1);
+	}
 
 	if (App->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN)
 	{
