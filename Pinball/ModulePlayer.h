@@ -2,6 +2,7 @@
 #include "Module.h"
 #include "Globals.h"
 #include "p2Point.h"
+#include "ModulePhysics.h"
 
 struct SDL_Texture;
 
@@ -18,6 +19,7 @@ public:
 public:
 	p2List<PhysBody*> circles;
 	PhysBody* muellesito;
+	/*PhysBody* StacticMuelle;*/
 	iPoint position;
 	SDL_Texture* bola;
 };

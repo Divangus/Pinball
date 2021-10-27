@@ -23,6 +23,10 @@ bool ModulePlayer::Start()
 	circles.add(App->physics->CreateCircle(515, 826, 15));
 	circles.getLast()->data->listener = this;
 	muellesito=App->physics->CreateRectangle(515, 850, 30, 20);
+	/*StacticMuelle = App->physics->CreateRectangle(515, 930, 30, 20);
+	StacticMuelle->body->SetType(b2_staticBody);*/
+	
+
 	
 	return true;
 }
@@ -59,6 +63,10 @@ update_status ModulePlayer::Update()
 	if (App->input->GetKey(SDL_SCANCODE_DOWN) == KEY_UP) {
 		position.y = 515;
 	}
+
+	/*b2DistanceJointDef MuelleJoint;
+	MuelleJoint.bodyA = muellesito->body;
+	MuelleJoint.bodyB = StacticMuelle->body;*/
 
 	return UPDATE_CONTINUE;
 }
